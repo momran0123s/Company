@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int i = 0;
+}
+@model List<Employee>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Manger</th>
+            <th scope="col">Department</th>
+            <th scope="col">Handle</th>
+        </tr>
+   </thead>
+    <tbody>
+        @foreach(Employee emp in Model)
+        {
+            
+        <tr>
+            <th scope="row">@(++i)</th>
+            <td>@emp.Fname @emp.Lname</td>
+            <td>@emp.Salary</td>
+                @if (emp.MGREmp !=null)
+                {
+                    <td>@emp.MGREmp.Fname</td>
+                }
+                else
+                {
+                <td>None</td>
+                } @if (emp.departmentAssigned !=null)
+                {
+                    <td>@emp.departmentAssigned.DName</td>
+                }
+                else
+                {
+                <td>None</td>
+                }
+                
+            
+        </tr>
+        }
+
+    </tbody>
+</table>
