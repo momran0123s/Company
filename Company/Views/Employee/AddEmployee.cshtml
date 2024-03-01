@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Employee
+<form asp-action="AddEmployee" asp-controller="Employee" method="post">
+    <div class="mb-3">
+        <label asp-for="Fname" class="form-label"></label>
+        <input asp-for="Fname" class="form-control" >
+    </div> 
+    <div class="mb-3">
+        <label asp-for="Lname" class="form-label"></label>
+        <input asp-for="Lname" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control" >
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

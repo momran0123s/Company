@@ -18,8 +18,7 @@ namespace Company
                 options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("company"));
             });
 
-            builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
-            
+            builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
